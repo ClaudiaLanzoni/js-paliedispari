@@ -12,7 +12,12 @@ Scriviamo sempre in italiano i passaggi che vogliamo fare
 Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.*/
 
 
-let numeroRandomUtente = parseInt(prompt('Scegli pari o dispari e inserisci un numero'));
+let numeroRandomUtente = parseInt(prompt('Scegli pari o dispari e inserisci un numero da 1 a 5'));
+
+while (numeroRandomUtente > 5 || Number.isNaN(numeroRandomUtente)) {
+    alert('Devi inserire un numero compreso tra 1 e 5!');
+    numeroRandomUtente = prompt('Scegli pari o dispari e inserisci un numero da 1 a 5');
+}
 
 let numeroRandomComputer = Math.floor(Math.random() * 5) + 1; //vale come "funzione"?
 
@@ -44,7 +49,7 @@ if ((testPariODispari(numeroRandomUtente) != testPariODispari(sommaNumeri) &&
 if (testPariODispari(sommaNumeri) === 'pari' ) {
     if (numeroRandomUtente % 2 == 0) {
         console.log('Ha vinto utente')
-    } else if (numeroRandomComputer % 2 == 'dispari') {
+    } else if (numeroRandomComputer % 2 == 1) {
         console.log('Ha vinto il computer')
     } 
 

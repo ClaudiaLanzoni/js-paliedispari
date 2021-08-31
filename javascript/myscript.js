@@ -11,7 +11,7 @@ Consigli del giorno
 Scriviamo sempre in italiano i passaggi che vogliamo fare
 Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.*/
 
-
+/*
 let numeroRandomUtente = parseInt(prompt('Scegli pari o dispari e inserisci un numero da 1 a 5'));
 
 while (numeroRandomUtente > 5 || Number.isNaN(numeroRandomUtente)) {
@@ -64,11 +64,45 @@ if (testPariODispari(sommaNumeri) === 'dispari' ) {
     }
 }
 
+*/
+
+let parolaUtente = prompt("Inserisci una parola");
+
+function creazioneStringaAlContrario(stringa) { //capovolge la parola
+
+    let splitString = stringa.split("").reverse().join("");
+
+    return splitString
+}
+ 
+//console.log(creazioneStringaAlContrario(parolaUtente)); //ha capovolto la parola
+
+if (parolaUtente === creazioneStringaAlContrario(parolaUtente)) { //attenzione, se si mette prima l'estratto
+    //della funzione si ferma sempre alla prima condizione
+    console.log('La parola è palindroma');
+    } else {
+    console.log ('La parola NON è palindroma');
+    }
+
+/*function isParolaPariODispari(parola) { //gli sto facendo verificare se la parola è pari o dispari
+    if (parola.length % 2 == 1) {
+        return 'dispari'
+    }
+} */
+
+
+
+
+
+
+
+
+
 
 
 
 /*
-let parolaUtente = prompt("Inserisci una parola");
+
 
 
 //COPIATO E INCOLLATO DA INTERNET!!! DA RIFARE!!!
